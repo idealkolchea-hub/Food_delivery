@@ -1,0 +1,18 @@
+language: en-US
+reviews:
+  profile: assertive
+  high_level_summary: true
+  auto_review:
+    enabled: true
+    auto_incremental_review: true
+  path_instructions:
+    - path: "src/**"
+      instructions: |
+        This is BiteBlast, a React + Vite + Supabase food delivery app.
+        Review for:
+        - Internal backend terms leaking into UI strings (Event Ledger, Handoff Token, Transition Authority, RPC, Supabase, state machine)
+        - Delivery code stored outside React state (no localStorage, sessionStorage, or URL params)
+        - Dead code and unused imports
+        - Component reusability across role flows
+        - Security issues in auth and order flow
+        - Overly nested conditionals
