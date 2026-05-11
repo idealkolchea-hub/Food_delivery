@@ -1,0 +1,141 @@
+/* ============================================================
+   BiteBlast — Claude-Inspired Design System
+   Inspired by Claude Code's amber-on-dark aesthetic.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+/* ── Reset ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ── Color Palette ── */
+:root {
+  /* Surfaces */
+  --bg-base:    #0D1117;   /* Claude Code background */
+  --bg-subtle:  #0A0E14;   /* Deeper */
+  --bg-surface: #161B22;   /* Card/panel surface */
+  --bg-overlay: #21262D;   /* Elevated surface */
+  --bg-hover:   #1C2128;   /* Hover state */
+
+  /* Borders */
+  --border:     #30363D;   /* Default border */
+  --border-subtle: #21262D;
+  --border-focus: #58A6FF;
+  --border-default: var(--border);
+
+  /* Text */
+  --text:       #E6EDF3;   /* Primary text */
+  --text-subtle:#8B949E;   /* Secondary/muted */
+  --text-faint: #6E7681;   /* Disabled/placeholder */
+  --text-primary: var(--text);
+  --text-secondary: var(--text-subtle);
+  --text-muted: var(--text-faint);
+
+  /* Amber accent (Claude signature) */
+  --amber:      #E3B341;   /* Primary accent */
+  --amber-hover:#F2C94C;
+  --amber-muted:#E3B34133;/* 20% opacity */
+  --amber-faint:#E3B3411A;/* 10% opacity */
+
+  /* Semantic */
+  --green:      #3FB950;   /* Success */
+  --green-bg:   rgba(63,185,80,0.1);
+  --red:        #F85149;   /* Error/destructive */
+  --red-bg:     rgba(248,81,73,0.1);
+  --blue:       #58A6FF;   /* Link/info */
+  --blue-bg:    rgba(88,166,255,0.1);
+  --yellow:     #E3B341;   /* Warning (same as amber) */
+  --yellow-bg:  rgba(227,179,65,0.1);
+  --warning:    var(--yellow);
+
+  /* Role brand colors */
+  --customer:   #F85149;
+  --customer-bg: rgba(248,81,73,0.1);
+  --partner:    #F0883E;
+  --partner-bg:  rgba(240,136,62,0.1);
+  --agent:      #3FB950;
+  --agent-bg:   rgba(63,185,80,0.1);
+  --admin:      #A371F7;
+  --admin-bg:   rgba(163,113,247,0.1);
+
+  /* Typography */
+  --font-sans: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'IBM Plex Mono', 'Cascadia Code', 'Fira Code', monospace;
+
+  /* Scale */
+  --text-xs:   0.6875rem;  /* 11px */
+  --text-sm:   0.8125rem;  /* 13px */
+  --text-base: 0.9375rem;  /* 15px */
+  --text-lg:   1.0625rem;  /* 17px */
+  --text-xl:   1.25rem;    /* 20px */
+  --text-2xl:  1.5rem;     /* 24px */
+  --text-3xl:  2rem;       /* 32px */
+
+  /* Spacing */
+  --sp-1:  0.25rem;
+  --sp-2:  0.5rem;
+  --sp-3:  0.75rem;
+  --sp-4:  1rem;
+  --sp-5:  1.25rem;
+  --sp-6:  1.5rem;
+  --sp-8:  2rem;
+  --sp-10: 2.5rem;
+  --sp-12: 3rem;
+  --sp-16: 4rem;
+  --space-2: var(--sp-2);
+  --space-3: var(--sp-3);
+  --space-4: var(--sp-4);
+  --space-5: var(--sp-5);
+  --space-6: var(--sp-6);
+
+  /* Radius */
+  --r-sm:  4px;
+  --r-md:  6px;
+  --r-lg:  8px;
+  --r-xl:  12px;
+  --r-full: 999px;
+  --radius-sm: var(--r-sm);
+  --radius-md: var(--r-md);
+  --radius-lg: var(--r-lg);
+  --radius-xl: var(--r-xl);
+
+  /* Transitions */
+  --t-fast: 100ms ease;
+  --t-base: 150ms ease;
+}
+
+/* ── Base ── */
+html { font-size: 16px; }
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  background: var(--bg-base);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #484F58; }
+
+/* ── Links ── */
+a { color: var(--blue); text-decoration: none; transition: color var(--t-fast); }
+a:hover { color: #79C0FF; }
+
+/* ── Code ── */
+code, pre {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+}
+
+/* ── Selection ── */
+::selection { background: var(--amber-muted); color: var(--text); }
+
+/* ── Focus ── */
+:focus-visible { outline: 2px solid var(--amber); outline-offset: 2px; border-radius: var(--r-sm); }

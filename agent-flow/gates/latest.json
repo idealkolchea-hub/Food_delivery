@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "timestamp": "2026-04-30T06:01:59.974Z",
+  "ok": true,
+  "results": [
+    {
+      "command": "npm run build",
+      "code": 0,
+      "durationMs": 13322,
+      "ok": true,
+      "output": "\n> biteblast-app@0.1.0 build\n> vite build\n\nvite v7.3.2 building client environment for production...\ntransforming...\n✓ 516 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/index.html                               0.86 kB │ gzip:   0.47 kB\ndist/assets/index-Ds6uylXT.css               29.09 kB │ gzip:   6.53 kB\ndist/assets/Stepper-DSK26j_8.js               0.70 kB │ gzip:   0.45 kB\ndist/assets/StudioPlaceholder-5rjnGz2V.js     0.84 kB │ gzip:   0.48 kB\ndist/assets/SkeletonCard-BsLiHS-F.js          1.91 kB │ gzip:   1.06 kB\ndist/assets/PartnerQueue-wVYOuvuE.js          2.13 kB │ gzip:   1.02 kB\ndist/assets/PartnerOrderCard-BiaoYEpS.js      3.48 kB │ gzip:   1.24 kB\ndist/assets/PartnerDashboard-C97s0VS3.js      3.88 kB │ gzip:   1.50 kB\ndist/assets/CustomerAuth-C0R8dIXO.js          4.61 kB │ gzip:   1.70 kB\ndist/assets/Cart-CcL4T6bu.js                  4.87 kB │ gzip:   1.50 kB\ndist/assets/OrderHistory-DLr8WFhv.js          5.66 kB │ gzip:   2.00 kB\ndist/assets/OrderConfirmation-aA7qA9cS.js     5.99 kB │ gzip:   1.60 kB\ndist/assets/PartnerAuth-COikiNHe.js           6.60 kB │ gzip:   2.13 kB\ndist/assets/Payment-CIt1KG1A.js               6.92 kB │ gzip:   2.06 kB\ndist/assets/PartnerOrderDetail-8iYF-E5m.js    7.47 kB │ gzip:   2.09 kB\ndist/assets/Support-D5hTHYy4.js               8.35 kB │ gzip:   2.43 kB\ndist/assets/Profile-DOvWXfyZ.js               9.11 kB │ gzip:   2.73 kB\ndist/assets/Home-CalBcsgi.js                  9.40 kB │ gzip:   3.19 kB\ndist/assets/Restaurant-ClIOEn8N.js            9.83 kB │ gzip:   3.24 kB\ndist/assets/Tracking-AZZOaIMa.js             11.87 kB │ gzip:   3.65 kB\ndist/assets/Checkout-B3E0-1ZL.js             12.22 kB │ gzip:   3.59 kB\ndist/assets/index-DsI50N9h.js               571.55 kB │ gzip: 170.59 kB\n\n(!) Some chunks are larger than 500 kB after minification. Consider:\n- Using dynamic import() to code-split the application\n- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks\n- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.\n✓ built in 10.99s\n"
+    },
+    {
+      "command": "npx playwright test tests/customer-flow.spec.ts",
+      "code": 0,
+      "durationMs": 58497,
+      "ok": true,
+      "output": "\nRunning 2 tests using 1 worker\n\n\u001b[1A\u001b[2K(node:491658) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.\n(Use `node --trace-warnings ...` to show where the warning was created)\n\n\n\u001b[1A\u001b[2K(node:491658) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.\n(Use `node --trace-warnings ...` to show where the warning was created)\n\n\n\u001b[1A\u001b[2K[1/2] [chromium] › tests/customer-flow.spec.ts:101:1 › keeps failed demo payment on the payment screen\n\u001b[1A\u001b[2K[2/2] [chromium] › tests/customer-flow.spec.ts:117:1 › places a successful UPI order and allows cancellation from tracking\n\u001b[1A\u001b[2K  2 passed (55.9s)\n"
+    },
+    {
+      "command": "npx playwright test tests/restaurant-flow.spec.ts",
+      "code": 0,
+      "durationMs": 53033,
+      "ok": true,
+      "output": "\nRunning 1 test using 1 worker\n\n\u001b[1A\u001b[2K(node:491905) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.\n(Use `node --trace-warnings ...` to show where the warning was created)\n\n\n\u001b[1A\u001b[2K(node:491905) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.\n(Use `node --trace-warnings ...` to show where the warning was created)\n\n\n\u001b[1A\u001b[2K[1/1] [chromium] › tests/restaurant-flow.spec.ts:99:1 › restaurant partner flow shows incoming queue and moves order to ready\n\u001b[1A\u001b[2K  1 passed (50.7s)\n"
+    }
+  ]
+}
